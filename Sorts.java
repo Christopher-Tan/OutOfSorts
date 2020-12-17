@@ -14,4 +14,23 @@ public class Sorts{
             }
         }
     }
+    public static void selectionSort(int[] data) {
+        for (int i = 0; i < data.length - 1; i++) {
+            int minimum = data[i];
+            int index = i;
+            for (int j = i; j < data.length; j++) {
+                if (data[j] < minimum) {
+                    minimum = data[j];
+                    index = j;
+                }
+            }
+            data[index] = data[i];
+            data[i] = minimum;
+        }
+    }
+    public static void insertionSort(int[] data) {
+        for (int i = 0; i < data.length; i++) {
+            
+        }
+    }
 }
