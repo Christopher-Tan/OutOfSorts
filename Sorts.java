@@ -31,18 +31,16 @@ public class Sorts{
     public static void insertionSort(int[] data) {
         for (int i = 0; i < data.length; i++) {
             int store = data[i];
-            int location = 0;
-            for (int j = 0; j < i; j++) {
-                if (data[j] <= data[i] && data[i] <= data[j+1]) {
-                    location = j+1;
-                }
-            }
+            int loc = 0;
             for (int j = i-1; j >= 0; j--) {
-                if (j >= location) {
+                if (store > data[j]) {
+                    loc = j+1;
+                    break;
+                } else {
                     data[j+1] = data[j];
                 }
             }
-            data[location] = store;
+            data[loc] = store;
         }
     }
 }

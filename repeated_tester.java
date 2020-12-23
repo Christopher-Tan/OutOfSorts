@@ -2,13 +2,13 @@ import java.util.Arrays;
 import java.util.Random;
 public class repeated_tester {
     public static void main(String[] args) {
-        int size = 1000;
+        int size = 10;
         Random object = new Random();
         for (int i = 0; i < 10000; i++) {
             Random created = new Random(object.nextInt());
             int[] list1 = new int[size];
             for (int j = 0; j < size; j++) {
-                list1[j] = created.nextInt();
+                list1[j] = created.nextInt() % 10;
             }
             int[] list2 = Arrays.copyOf(list1, list1.length);
             int[] list3 = Arrays.copyOf(list1, list1.length);
